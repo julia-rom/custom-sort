@@ -1,13 +1,15 @@
-var list = [2, 4, 6, 7, 1, 110, 261]
+var list = [2, 4, 6, 7, 1, 1999, 23]
 
 function getNum(number) {
-    list.push(number);
+    for (i = 0; i < number.length; i++) {
+        list.push(number);
+    }
 }
 
 module.exports = {
-    sortNum:
-        list.sort(function (a, b) { return a - b }),
-
+    sortNum: function () {
+        return list.sort(function (a, b) { return a - b })
+    },
+    getNum: getNum
 }
 
-console.log(list);
